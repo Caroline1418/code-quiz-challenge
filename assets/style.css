@@ -1,0 +1,71 @@
+body {
+    font-family: arial;
+    font-size: 120%;
+}
+
+a{
+    color: rgba(36, 196, 196, 0.705);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(241, 22, 132);
+}
+
+button{
+    display: inline-block;
+    margin: 5px;
+    font-size: 100%;
+    background-color: rgb(36, 196, 196);
+    padding: 3px 6px;
+    color: white;
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(241, 22, 132);
+}
+
+.choices button{
+    display: block;
+}
+
+input[type="text"] {
+    font-size: 100%;
+}
+
+ol{
+    padding: auto;
+    max-height: 400px;
+    overflow: auto;
+}
+
+li{
+    padding: 5px;
+    list-style: decimal inside none;
+}
+
+.wrapper{
+    margin: 100px 0 auto 0;
+    max-width: 600px;
+}
+
+.hide{
+    display: none;
+}
+
+.start{
+    text-align: center;
+}
+
+.scores{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.timer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
