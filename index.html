@@ -15,12 +15,18 @@
     </div>
 
     <div class="wrapper">
+        <div id="start-screen" class="start">
         <h1>Coding Quiz!</h1>
         <p>
             Answer the following questions in the alloted time. Make sure to get the 
             answer right, wrong answers will bring your score down by 10!!
         </p>
         <button id="start">Get Started!</button>
+    </div>
+
+    <div id="questions" class="hide">
+        <h2 id="q-title"></h2>
+        <div id="options" class="options"></div>
     </div>
 
     <div id="end" class="hide">
@@ -33,6 +39,8 @@
             <button id="submit">submit</button>
         </p>
     </div>
+
+    <div id="feedback" class="feedback hide"></div>
 
         <script src="./assets/js/quizqs.js"></script>
         <script src="./assets/js/script.js"></script>
