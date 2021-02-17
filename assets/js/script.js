@@ -67,3 +67,38 @@ function questionClick(){
         getQuestion()
     }
 }
+
+function quizOver() {
+    clearInterval(timerID);
+
+    var endScreenEL = document.getElementById("end-screen");
+    scoreEl.textContent = time;
+
+    questionsEL.setAttribute("class", "hide");
+}
+
+function clockTick(){
+    time--;
+    timerEL.textContent = time;
+
+    if(time <= 0){
+        quizOver();
+    }
+}
+
+function saveHS(){
+    var name = nameEL.value.trim();
+
+    if(name !==""){
+        var HS = JSON.parse(window.localStorage.getItem("high-scores")) || [];
+
+        var newScore = {
+            score: time,
+            name: name
+        };
+        HS.push(newScore);
+        window.localStorage.setItem("high-scores", JSON.stringify(HS));
+
+        window.location.href = "hs.html";
+    }
+}
