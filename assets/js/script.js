@@ -14,7 +14,7 @@ var feedbackEL = document.getElementById("feedback")
 function startQuiz(){
     var startScreenEL = document.getElementById("start-screen")
     startScreenEL.setAttribute("class", "hide");
-
+    questionsEL.removeAttribute("class")
     timerID = setInterval(clockTick, 1000)
     timerEL.textContent = time;
 
@@ -51,12 +51,12 @@ function questionClick(){
 
         feedbackEL.textContent = "Incorrect!"
     }else{
-        feedbackEL.textContent = "Correct"
+        feedbackEL.textContent = "Correct!"
     }
 
     feedbackEL.setAttribute("class", "feedback");
     setTimeout(function(){
-        feedbackEL.setAttribute("class", "feedback-hide");
+        feedbackEL.setAttribute("class", "feedback hide");
     }, 1000);
 
     currentQIndex++;
@@ -71,8 +71,10 @@ function questionClick(){
 function quizOver() {
     clearInterval(timerID);
 
-    var endScreenEL = document.getElementById("end-screen");
+    var endScreenEL = document.getElementById("end");
+    var scoreEl = document.getElementById("final-score")
     scoreEl.textContent = time;
+    endScreenEL.removeAttribute("class")
 
     questionsEL.setAttribute("class", "hide");
 }
