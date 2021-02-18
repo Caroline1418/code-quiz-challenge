@@ -102,3 +102,15 @@ function saveHS(){
         window.location.href = "hs.html";
     }
 }
+
+function checkEnt(event) {
+    if (event.key === "Enter"){
+        saveHS();
+    }
+}
+
+subBtn.onclick = saveHS;
+
+startBtn.onclick = startQuiz;
+
+nameEL.onkeyup = checkEnt;
