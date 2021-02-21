@@ -1,3 +1,6 @@
+var sfxCorrect = new Audio ("assets/correct.wav");
+var sfxIncorrect = new Audio("assets/incorrect.wav");
+
 var time = questions.length * 15;
 var timerID;
 var currentQIndex = 0;
@@ -49,8 +52,10 @@ function questionClick(){
         }
         timerEL.textContent = time;
 
+        sfxIncorrect.play();
         feedbackEL.textContent = "Incorrect!"
     }else{
+        sfxCorrect.play();
         feedbackEL.textContent = "Correct!"
     }
 
